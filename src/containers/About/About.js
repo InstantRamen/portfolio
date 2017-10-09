@@ -12,14 +12,15 @@ const aboutStyle = {
 };
 
 const imageStyle = {
-  boxShadow: '0px 5px 5px #888'
+  boxShadow: '0px 5px 5px #888',
+  maxWidth: '768px'
 }
 
 class About extends Component {
   render() {
     return (
       <div className="about-page" style={aboutStyle}>
-        <Image src={me1} fluid style={imageStyle} />
+        <Image src={me1} fluid style={imageStyle} centered />
         <Segment basic size="big">
           <Header>I'm Derrick</Header>
           <p>
