@@ -5,22 +5,19 @@ import {
   Header
 } from 'semantic-ui-react';
 
-import me1 from '../../images/me-0.jpg';
+import ImageHeader from '../../components/ImageHeader/ImageHeader';
+
+import photoOfMe from '../../images/me-0.jpg';
 
 const aboutStyle = {
   color: '#333'
 };
 
-const imageStyle = {
-  boxShadow: '0px 5px 5px #888',
-  maxWidth: '768px'
-}
-
 class About extends Component {
   render() {
     return (
       <div className="about-page" style={aboutStyle}>
-        <Image src={me1} fluid style={imageStyle} centered />
+        <ImageHeader src={photoOfMe} />
         <Segment basic size="big">
           <Header>I'm Derrick</Header>
           <p>
