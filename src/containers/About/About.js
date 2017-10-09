@@ -7,11 +7,19 @@ import {
 
 import me1 from '../../images/me-0.jpg';
 
+const aboutStyle = {
+  color: '#333'
+};
+
+const imageStyle = {
+  boxShadow: '0px 5px 5px #888'
+}
+
 class About extends Component {
   render() {
     return (
-      <div className="about-page">
-        <Image src={me1} fluid />
+      <div className="about-page" style={aboutStyle}>
+        <Image src={me1} fluid style={imageStyle} />
         <Segment basic size="big">
           <Header>I'm Derrick</Header>
           <p>
