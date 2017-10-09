@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Container } from 'semantic-ui-react';
+
 import Header from '../../components/Header/Header';
 import About  from '../../containers/About/About';
 
@@ -8,7 +10,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <About />
+        <Container>
+          <About />
+        </Container>
       </div>
     );
   }
