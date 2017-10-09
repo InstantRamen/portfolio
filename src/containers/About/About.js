@@ -6,6 +6,7 @@ import {
 } from 'semantic-ui-react';
 
 import me1 from '../../images/me-0.jpg';
+
 class About extends Component {
   render() {
     return (
@@ -13,7 +14,12 @@ class About extends Component {
         <Image src={me1} fluid />
         <Segment basic size="big">
           <Header>I'm Derrick</Header>
-          <p>I'm a developer with a primary focus on web technologies, namely Node/Express on the backend, and React on the frontend. As it stands, I have at least basic experience in React, Node, Ruby/Rails, Java, Python, and C#; </p>
+          <p>
+            I'm a developer with a primary focus on web technologies, 
+            namely Node/Express on the backend, and React on the frontend.
+            As it stands, I have at least basic experience in React,
+            Node, Ruby/Rails, Java, Python, and C#.
+          </p>
         </Segment>
       </div>
     );
