@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import React, { Component } from 'react';
 import { 
   Container,
@@ -8,7 +10,7 @@ import {
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
-import styles from './styles'
+import styles from './styles';
 
 import src from './images/temp.gif';
 
@@ -29,12 +31,20 @@ class Projects extends Component {
   
   generateTags(data) {
     return data.map(tag => {
-      return {key: tag.key, value: tag.key, text: tag.name}
+      return {key: tag.key, value: tag.key, text: tag.name};
     });
   }
   
-  populateProjects() {
-    return this.state.projects.map((project, key) => {
+  filterTags(filter = this.state.searchValue) {
+    if (!filter) return this.state.projects;
+    
+    return this.state.projects.filter((project) => {
+      return _.difference(filter, project.tags).length === 0;
+    });
+  }
+  
+  populateProjects(projects) {
+    return projects.map((project, key) => {
       return (
         <ProjectCard 
           title={project.name}
@@ -53,7 +63,7 @@ class Projects extends Component {
   }
   
   render() {
-    let projects = this.populateProjects();
+    let projects = this.populateProjects(this.filterTags());
     
     return (
       <Container className='projects-page' style={styles.projectsPage}>

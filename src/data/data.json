@@ -43,7 +43,8 @@
       "name": "Express"
     }
   ],
-  "projects": [{
+  "projects": [
+    {
       "name": "Calculator",
       "about": "A simple calculator",
       "tags": ["react", "javascript", "front-end"]
