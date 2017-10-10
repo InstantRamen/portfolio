@@ -8,6 +8,8 @@ import {
   Dropdown
 } from 'semantic-ui-react';
 
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
+
 import styles from './styles'
 
 import src from './images/temp.gif';
@@ -20,7 +22,6 @@ class Projects extends Component {
     
     this.state = {
       tags,
-      currentTags: [],
       searchValue: []
     };
     
@@ -55,11 +56,12 @@ class Projects extends Component {
         </div>
         <div className='project-list'>
           <Card.Group itemsPerRow={3} stackable>
-            <Card raised image={src} />
-            <Card raised image={src} />
-            <Card raised image={src} />
-            <Card raised image={src} />
-            <Card raised image={src} />
+            <ProjectCard 
+              title="Todo App"
+              description="a very simple todo application" 
+              image={src} 
+              tags={['react', 'node']}
+            />
           </Card.Group>
         </div>
       </Container>
