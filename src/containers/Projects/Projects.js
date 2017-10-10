@@ -22,15 +22,30 @@ class Projects extends Component {
     
     this.state = {
       tags,
-      searchValue: []
+      searchValue: [],
+      projects: this.props.data.projects
     };
     
     this.handleSearchValueChange = this.handleSearchValueChange.bind(this);
   }
   
   generateTags(data) {
-    return data.map((tag) => {
+    return data.map(tag => {
       return {key: tag.key, value: tag.key, text: tag.name}
+    });
+  }
+  
+  populateProjects() {
+    return this.state.projects.map((project, key) => {
+      return (
+        <ProjectCard 
+          title={project.name}
+          description={project.about} 
+          image={src} 
+          tags={project.tags}
+          key={key}
+        /> 
+      );
     });
   }
   
@@ -40,6 +55,8 @@ class Projects extends Component {
   }
   
   render() {
+    let projects = this.populateProjects();
+    
     return (
       <Container className='projects-page' style={styles.projectsPage}>
         <div className='project-search' style={styles.searchBar}>
@@ -56,12 +73,7 @@ class Projects extends Component {
         </div>
         <div className='project-list'>
           <Card.Group itemsPerRow={3} stackable>
-            <ProjectCard 
-              title="Todo App"
-              description="a very simple todo application" 
-              image={src} 
-              tags={['react', 'node']}
-            />
+            {projects}
           </Card.Group>
         </div>
       </Container>

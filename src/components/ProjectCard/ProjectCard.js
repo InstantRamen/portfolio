@@ -7,8 +7,8 @@ import {
 } from 'semantic-ui-react';
 
 const ProjectCard = (props) => {
-  let tags = props.tags.map(tag => {
-    return <Label circular as='a'> {tag} </Label>;
+  let tags = props.tags.map((tag, key) => {
+    return (<span key={key}><Label circular as='a'> {tag} </Label></span>);
   });
   
   return (
