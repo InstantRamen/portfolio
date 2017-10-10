@@ -3,7 +3,10 @@ import React from 'react';
 import {
   Card,
   Image,
-  Label
+  Label,
+  Segment,
+  Icon,
+  Button
 } from 'semantic-ui-react';
 
 const ProjectCard = (props) => {
@@ -13,13 +16,22 @@ const ProjectCard = (props) => {
   
   return (
     <Card raised>
+      <Image src={props.image} centered />
       <Card.Content>
         <Card.Header>{props.title}</Card.Header>
-        <Image src={props.image} />
         <Card.Description>{props.description}</Card.Description>
+
       </Card.Content>
+      
       <Card.Content extra>
-        <span className='tags'>{tags}</span>
+        
+        <Segment basic size='mini' className='tags' >
+          {tags}
+        </Segment>
+        <Button.Group className='links'>
+          <Button basic><Icon name='github' size='large' />Github</Button>
+          <Button basic><Icon name='globe' size='large' />Live</Button>
+        </Button.Group>
       </Card.Content>
     </Card>
   );

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { 
   Container,
-  Image,
-  Segment,
-  Header,
   Card,
-  Dropdown
+  Dropdown,
+  Responsive
 } from 'semantic-ui-react';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -72,9 +70,12 @@ class Projects extends Component {
           />
         </div>
         <div className='project-list'>
-          <Card.Group itemsPerRow={3} stackable>
+          <Responsive as={Card.Group} minWidth={1000} itemsPerRow={3}>
             {projects}
-          </Card.Group>
+          </Responsive>
+          <Responsive as={Card.Group} maxWidth={999} itemsPerRow={2} stackable>
+            {projects}
+          </Responsive>
         </div>
       </Container>
     );
