@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
-import { Container } from 'semantic-ui-react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
 import Header from '../../components/Header/Header';
 import About  from '../../containers/About/About';
@@ -12,8 +16,14 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+      
         <Header title={data.info.name} />
-        <Projects data={data} />
+        <Route exact path='/' component={About} />
+        <Route 
+          exact 
+          path='/projects' 
+          render={(props) => <Projects {...props} data={data} />} 
+        />
       </div>
     );
   }
