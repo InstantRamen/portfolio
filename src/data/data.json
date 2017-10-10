@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "Derrick Cudd",
+    "about": {
+      "title": "I'm Derrick",
+      "body": "yo"
+    }
+  },
+  "all_tags": [{
+      "key": "react",
+      "name": "React"
+    },
+    {
+      "key": "javascript",
+      "name": "JavaScript"
+    },
+    {
+      "key": "node",
+      "name": "NodeJS"
+    },
+    {
+      "key": "fullstack",
+      "name": "Fullstack"
+    },
+    {
+      "key": "front-end",
+      "name": "Front End"
+    },
+    {
+      "key": "back-end",
+      "name": "Back End"
+    },
+    {
+      "key": "mongodb",
+      "name": "MongoDB"
+    },
+    {
+      "key": "mvc",
+      "name": "MVC"
+    },
+    {
+      "key": "express",
+      "name": "Express"
+    }
+  ],
+  "projects": [{
+      "name": "Calculator",
+      "about": "A simple calculator",
+      "tags": ["react", "javascript", "front-end"]
+    },
+    {
+      "name": "Todo App",
+      "about": "A simple calculator",
+      "tags": ["react", "javascript", "fullstack", "node", "mongodb", "express"]
+    },
+    {
+      "name": "Portfolio",
+      "about": "This portfolio",
+      "tags": ["react", "javascript", "front-end"]
+    }
+  ]
+}

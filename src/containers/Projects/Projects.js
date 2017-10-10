@@ -12,16 +12,14 @@ import styles from './styles'
 
 import src from './images/temp.gif';
 
-const tags = [
-  { key: 'react', value: 'react', text: 'React' },
-  { key: 'node', value: 'node', text: 'NodeJS' }
-];
-
 class Projects extends Component {
   constructor(props) {
     super(props);
     
+    let tags = this.generateTags(this.props.data.all_tags);
+    
     this.state = {
+      tags,
       currentTags: [],
       searchValue: []
     };
@@ -29,9 +27,14 @@ class Projects extends Component {
     this.handleSearchValueChange = this.handleSearchValueChange.bind(this);
   }
   
+  generateTags(data) {
+    return data.map((tag) => {
+      return {key: tag.key, value: tag.key, text: tag.name}
+    });
+  }
+  
   handleSearchValueChange(e, { value }) {
     let searchValue = value;
-    console.log(searchValue);
     this.setState({ searchValue });
   }
   
@@ -45,7 +48,7 @@ class Projects extends Component {
             multiple 
             search 
             selection 
-            options={tags}
+            options={this.state.tags}
             onChange={this.handleSearchValueChange}
             value={this.state.searchValue}
           />
