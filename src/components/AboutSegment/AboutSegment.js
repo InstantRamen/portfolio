@@ -6,19 +6,15 @@ import {
   Header
 } from 'semantic-ui-react';
 
-
-const style = {
-  color: '#333'
-};
+import styles from './styles';
 
 const AboutSegment = (props) => {
   return (
     <Container>
       <Segment 
-        basic 
-        centered
+        basic
         size="big" 
-        style={style}
+        style={styles.aboutSegment}
         padded='very'
       >
         <Header>I'm Derrick</Header>

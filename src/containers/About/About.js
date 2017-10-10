@@ -11,16 +11,12 @@ import AboutSegment from '../../components/AboutSegment/AboutSegment';
 
 import photoOfMe from '../../images/me-0.jpg';
 
-const aboutStyle = {
-  color: '#333'
-};
-
 class About extends Component {
   render() {
     return (
       <div className="about-page" >
         <ImageHeader src={photoOfMe} />
-        <AboutSegment style={aboutStyle} />
+        <AboutSegment />
       </div>
     );
   }
