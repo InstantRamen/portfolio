@@ -54,6 +54,8 @@ class Projects extends Component {
           image={src} 
           tags={project.tags}
           key={key}
+          live={project.live}
+          source={project.source}
         /> 
       );
     });

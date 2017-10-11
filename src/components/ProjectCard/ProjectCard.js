@@ -29,8 +29,14 @@ const ProjectCard = (props) => {
           {tags}
         </Segment>
         <Button.Group className='links'>
-          <Button basic><Icon name='github' size='large' />Github</Button>
-          <Button basic><Icon name='globe' size='large' />Live</Button>
+          <Button basic as='a' href={props.source}>
+            <Icon name='github' size='large' />
+            Github
+          </Button>
+          <Button basic as='a' href={props.live}>
+            <Icon name='globe' size='large' />
+            Live
+          </Button>
         </Button.Group>
       </Card.Content>
     </Card>

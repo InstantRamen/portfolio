@@ -40,10 +40,6 @@ export default {
       name: "MongoDB"
     },
     {
-      key: "mvc",
-      name: "MVC"
-    },
-    {
       key: "express",
       name: "Express"
     },
