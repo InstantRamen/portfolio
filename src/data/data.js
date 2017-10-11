@@ -1,9 +1,9 @@
-{
+export default {
   "info": {
     "name": "Derrick Cudd"
   },
   "about": {
-    "title": "I'm Derrick",
+    "title": "I'm not Derrick",
     "body": "I'm a developer with a primary focus on web technologies, namely Node/Express on the backend, and React on the frontend. As it stands, I have at least basic experience in React, Node, Ruby/Rails, Java, Python, and C#."
   },
   "all_tags": [{
