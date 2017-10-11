@@ -1,10 +1,9 @@
 const styles = {
   projectsPage: {
-    background: '#fff',
     paddingTop: '20px'
   },
   searchBar: {
-    paddingBottom: '20px'
+    paddingBottom: '50px'
   }
 }
 

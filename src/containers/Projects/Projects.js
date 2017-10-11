@@ -1,11 +1,13 @@
 import _ from 'lodash';
 
 import React, { Component } from 'react';
+
 import { 
   Container,
   Card,
   Dropdown,
-  Responsive
+  Responsive,
+  Header
 } from 'semantic-ui-react';
 
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -67,9 +69,10 @@ class Projects extends Component {
     
     return (
       <Container className='projects-page' style={styles.projectsPage}>
+        <Header size='huge'>Projects</Header>
         <div className='project-search' style={styles.searchBar}>
           <Dropdown 
-            placeholder='tag' 
+            placeholder='Filter by tag...' 
             fluid 
             multiple 
             search 
