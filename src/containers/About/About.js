@@ -13,10 +13,12 @@ import photoOfMe from '../../images/me-0.jpg';
 
 class About extends Component {
   render() {
+    let { title, body } = this.props.data;
     return (
       <div className="about-page" >
+        
         <ImageHeader src={photoOfMe} />
-        <AboutSegment />
+        <AboutSegment title={title} body={body} />
       </div>
     );
   }
