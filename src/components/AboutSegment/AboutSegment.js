@@ -10,16 +10,9 @@ import styles from './styles';
 
 const AboutSegment = (props) => {
   return (
-    <Container>
-      <Segment 
-        basic
-        size="big" 
-        style={styles.aboutSegment}
-        padded='very'
-      >
+    <Container style={styles.aboutSegment}>
         <Header>{props.title}</Header>
         <p>{props.body}</p>
-      </Segment> 
     </Container>
   );
 };

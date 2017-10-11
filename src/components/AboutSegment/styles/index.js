@@ -1,7 +1,8 @@
 const styles = {
   aboutSegment: {
+    paddingTop: 40,
     color: '#333',
-    fontSize: '18pt'
+    fontSize: '16pt'
   }
 }
 
